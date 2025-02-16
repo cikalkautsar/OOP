@@ -10,8 +10,6 @@ ekspresi: (uang > 10000) &&  (!tidakAdaKelasKuliah)
  */
 import java.util.Scanner;
 
-import java.util.Scanner;
-
 public class Tugas2b {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
@@ -20,11 +18,14 @@ public class Tugas2b {
         int uang = input.nextInt();
 
         System.out.print("Pacar km emg gada kelas? (true kalau gak ada, false kalau ada): ");
-        boolean tidakAdaKelasKuliah = input.nextBoolean();
+        boolean tidakAdaKelas = input.nextBoolean(); 
+        // true berarti pasangan gak ada kelas, false berarti ada kelas
 
-        boolean bisaBeliMigacoan = (uang > 10000) && !tidakAdaKelasKuliah;
+        boolean bisaBeliMigacoan = (uang > 10000) && !tidakAdaKelas; 
+        // !tidakAdaKelas = pasangan ada kelas, jadi gak beli
+        // kalau tidakAdaKelas = true (gak ada kelas), !tidakAdaKelas = false
 
         System.out.println("Jadi bisa ga nih? (true kalau bisa, false kalau gabisa) " + bisaBeliMigacoan);
-
+        
     }
 }
