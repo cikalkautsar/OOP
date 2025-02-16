@@ -1,3 +1,7 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
 package com.cikalstudio.tugas2;
 
 /*2) Buatlah algoritma dalam Bahasa Java Anda akan keluar membeli migacoan jika  mempunyai uang lebih besar dari 10000 
@@ -18,10 +22,9 @@ public class Tugas2b {
         System.out.print("Pacar km emg gada kelas? (true kalau gak ada, false kalau ada): ");
         boolean tidakAdaKelasKuliah = input.nextBoolean();
 
-        boolean bisaBeliMigacoan = (uang > 10000) && tidakAdaKelasKuliah;
+        boolean bisaBeliMigacoan = (uang > 10000) && !tidakAdaKelasKuliah;
 
         System.out.println("Jadi bisa ga nih? (true kalau bisa, false kalau gabisa) " + bisaBeliMigacoan);
 
-        input.close();
     }
 }
