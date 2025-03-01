@@ -1,1 +1,20 @@
+/*
+ Buatlah algoritma dalam bahasa Java, menampilkan bilangan dari satu sampai dengan
+n, dimana n diinput dari alat masukan, n>=1.   
+ */
+
+package com.cikalstudio.tugas4;
+import java.util.Scanner;
+public class Tugas4a {
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner (System.in);
+        System.out.println("Masukkan sebuah bilangan: ");
+        int n = input.nextInt();
+            for(int i =1; i<=n; i++) {
+                System.out.print("" + i);
+            }
+        
+    }
+}
 
