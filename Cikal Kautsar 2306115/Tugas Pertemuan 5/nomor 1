@@ -1,0 +1,22 @@
+/*
+Buatlah method prosedur atau fungsi algoritma dalam bahasa Java, menampilkan
+bilangan dari satu sampai dengan n, dimana n diinput dari alat masukan, n>=1.
+*/
+package com.cikalstudio.tugas5;
+
+import java.util.Scanner;
+
+public class Tugas5a {
+    static void perulangan_N(){
+        Scanner input = new Scanner (System.in);
+        System.out.print("Masukkan sebuah bilangan: ");
+        int n = input.nextInt();
+        for(int i =1; i<=n; i++) {
+            System.out.print("" + i);
+        }
+    }
+    
+    public static void main(String[] args) {
+        perulangan_N();
+    }
+}
