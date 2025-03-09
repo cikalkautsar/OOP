@@ -1,0 +1,59 @@
+/*
+Buatlah method prosedur atau fungsi algoritma dalam bahasa Java, yang membaca
+panjang (integer) tiga buah sisi sebuah segitiga, a, b, dan c, yang dalam hal ini a <= b <=
+c, lalu menentuka apakah ketiga sisi tersebut membentuk segitiga siku – siku, segitiga
+lancip, atau segitiga tumpul (Petunjuk gunakan hukum Phytagoras).
+*/
+
+
+package com.cikalstudio.tugas5;
+
+import java.util.Scanner;
+
+public class Tugas5c {
+    static int jenisSegitiga(int a, int b, int c) {
+        if (a <= 0 || b <= 0 || c <= 0) {
+            System.out.println("Sisi harus lebih dari 0!");
+            return -1;
+        } else if (a + b <= c || a + c <= b || b + c <= a) {
+            System.out.println("Ketiga sisi tidak bisa membentuk segitiga!");
+            return -1;
+        }
+        
+        if (a * a + b * b == c * c || a * a + c * c == b * b || b * b + c * c == a * a) {
+            return 1; // Segitiga Siku-siku
+        } else if (a * a + b * b > c * c && a * a + c * c > b * b && b * b + c * c > a * a) {
+            return 2; // Segitiga Lancip
+        } else {
+            return 3; // Segitiga Tumpul
+        }
+    }
+    
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int a, b, c, hasil;
+        
+        do {
+            System.out.print("Masukkan sisi ke-1: ");
+            a = scanner.nextInt();
+            System.out.print("Masukkan sisi ke-2: ");
+            b = scanner.nextInt();
+            System.out.print("Masukkan sisi ke-3: ");
+            c = scanner.nextInt();
+            
+            hasil = jenisSegitiga(a, b, c);
+        } while (hasil == -1);
+        
+        switch (hasil) {
+            case 1:
+                System.out.println("Ini Segitiga Siku-siku");
+                break;
+            case 2:
+                System.out.println("Ini Segitiga Lancip");
+                break;
+            default:
+                System.out.println("Ini Segitiga Tumpul");
+                break;
+        }
+    }
+}
