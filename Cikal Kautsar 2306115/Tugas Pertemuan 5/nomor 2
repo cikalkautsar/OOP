@@ -1,0 +1,36 @@
+/*
+Buatlah method prosedur atau fungsi algoritma dalam bahasa Java, yang menerima
+masukan tiga buah sisi, dimana jika semua sisi sama maka tampilkan “Termasuk
+Kubus”, jika ada sisi yang tidak sama maka tampilkan bukan kubus.
+*/
+package com.cikalstudio.tugas5;
+
+import java.util.Scanner;
+
+public class Tugas5b {
+    static int isKubus(int sisi1, int sisi2, int sisi3) {
+        if (sisi1 == sisi2 && sisi2 == sisi3) {
+            return 1;
+        } else {
+            return 0;
+        }
+    }
+    
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        int sisi1, sisi2, sisi3;
+        
+        System.out.print("Masukkan sisi ke-1: ");
+        sisi1 = input.nextInt();
+        System.out.print("Masukkan sisi ke-2: ");
+        sisi2 = input.nextInt();
+        System.out.print("Masukkan sisi ke-3: ");
+        sisi3 = input.nextInt();
+        
+        if (isKubus(sisi1, sisi2, sisi3) == 1) {
+            System.out.println("Termasuk Kubus");
+        } else {
+            System.out.println("Bukan Kubus");
+        }
+    }
+}
