@@ -1,5 +1,5 @@
 package com.cikalstudio.tugas6;
-
+//ini mesin
 public class Main {
 
     public static void main(String[] args) {
